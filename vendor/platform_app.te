@@ -20,3 +20,6 @@ allow platform_app sysfs_battery_supply:dir search;
 allow platform_app sysfs_battery_supply:file { getattr open read }; 
 allow platform_app sysfs_kgsl:dir search;
 allow platform_app sysfs_kgsl:file { getattr open read };
+
+# Write to /data/ota_package for OTA packages.
+allow platform_app ota_package_file:dir { getattr search read open };
