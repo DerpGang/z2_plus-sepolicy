@@ -1,0 +1,4 @@
+get_prop(appdomain, exported_camera_prop)
+
+allow appdomain rootfs:lnk_file r_file_perms;
+allow appdomain tmpfs:lnk_file r_file_perms;

@@ -1,0 +1,7 @@
+allow thermal-engine { sysfs_batteryinfo sysfs_usb_supply }:file r_file_perms;
+allow thermal-engine sysfs_batteryinfo:file write;
+allow thermal-engine { sysfs_batteryinfo sysfs_usb_supply }:dir search;
+allow thermal-engine sysfs:dir { read }; 
+allow thermal-engine sysfs:file { getattr read write };
+allow thermal-engine thermal-engine:capability { sys_admin };
+allow thermal-engine sysfs:dir { open };
