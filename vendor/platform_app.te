@@ -4,3 +4,6 @@ allow platform_app sysfs_kgsl:dir { search };
 allow platform_app sysfs_kgsl:lnk_file { read };
 
 get_prop(platform_app, exported_camera_prop)
+
+# Screenshot sound
+get_prop(platform_app, exported_audio_prop)
