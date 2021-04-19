@@ -5,7 +5,7 @@ genfscon debugfs /rmt_storage              u:object_r:debugfs_rmt:s0
 genfscon sysfs /devices/soc/600000.qcom,pcie                                                                                     u:object_r:sysfs_pcie:s0
 genfscon sysfs /devices/soc/624000.ufshc/host0/target0:0:0/0:0:0:0                                                               u:object_r:sysfs_scsi_devices_0000:s0
 genfscon sysfs /devices/soc/624000.ufshc/health                                                                                  u:object_r:sysfs_scsi_devices_0000:s0
-genfscon sysfs /devices/soc/600000.qcom,pcie/pci0000:00/0000:00:00.0/0000:01:00.0/net/wlan0                                      u:object_r:sysfs_wifi:s0
+genfscon sysfs /devices/soc/600000.qcom,pcie/pci0000:00/0000:00:00.0/0000:01:00.0/net/wlan0 u:object_r:sysfs_net:s0
 genfscon sysfs /devices/soc/400f000.qcom,spmi/spmi-0/spmi0-02/400f000.qcom,spmi:qcom,pmi8994@2:qcom,fg/power_supply              u:object_r:sysfs_batteryinfo:s0
 genfscon sysfs /devices/soc/400f000.qcom,spmi/spmi-0/spmi0-02/400f000.qcom,spmi:qcom,pmi8994@2:qcom,qpnp-smbcharger/power_supply u:object_r:sysfs_batteryinfo:s0
 genfscon sysfs /devices/soc/400f000.qcom,spmi/spmi-0/spmi0-02/400f000.qcom,spmi:qcom,pmi8994@2:bcl@4200/power_supply             u:object_r:sysfs_batteryinfo:s0
@@ -29,3 +29,10 @@ genfscon sysfs /devices/soc/qpnp-fg-17/power_supply/bms                 u:object
 genfscon sysfs /devices/soc/qpnp-smbcharger-16/power_supply/battery     u:object_r:sysfs_battery_supply:s0
 genfscon sysfs /devices/soc/qpnp-smbcharger-16/power_supply/dc          u:object_r:sysfs_battery_supply:s0
 genfscon sysfs /devices/soc/soc:qcom,bcl/power_supply/bcl/type          u:object_r:sysfs_batteryinfo:s0
+
+# fpc
+genfscon sysfs /devices/soc/soc:fpc1020                 u:object_r:sysfs_fingerprint:s0
+genfscon sysfs /devices/soc/soc:fpc1020/proximity_state u:object_r:sysfs_fingerprint:s0
+genfscon sysfs /devices/soc/soc:fpc1020/irq             u:object_r:sysfs_fingerprint:s0
+genfscon sysfs /devices/soc/soc:fpc1020/utouch_disable  u:object_r:sysfs_fingerprint:s0
+

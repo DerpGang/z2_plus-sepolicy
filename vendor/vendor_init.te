@@ -11,3 +11,4 @@ allow vendor_init {
 allow vendor_init device:file create_file_perms;
 allow vendor_init debugfs:dir mounton;
 allow vendor_init debugfs:file rw_file_perms;
+allow init debugfs_tracing_debug:dir mounton;

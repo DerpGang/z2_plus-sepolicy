@@ -1,4 +1,7 @@
 dontaudit gmscore_app hal_memtrack_hwservice:hwservice_manager { find };
 
+r_dir_file(gmscore_app, sysfs_pcie)
+allow gmscore_app sysfs_net:file open;
+
 binder_call(gmscore_app, hal_memtrack_default);
 binder_call(gmscore_app, hal_memtrack_hwservice);

@@ -10,5 +10,6 @@ allow init hwservicemanager:binder { transfer };
 allow init hal_perf_hwservice:hwservice_manager { find };
 allow init hal_perf_default:binder { call };
 
+allow init debugfs_tracing_debug:dir mounton;
 allow init debugfs:dir mounton;
 allow init debugfs:file rw_file_perms;
