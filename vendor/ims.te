@@ -1,1 +1,3 @@
 set_prop(ims, ctl_stop_prop)
+
+dontaudit ims diag_device:chr_file rw_file_perms;
